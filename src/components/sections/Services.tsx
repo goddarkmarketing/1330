@@ -44,7 +44,6 @@ export function Services() {
                     src={service.image}
                     alt={service.alt}
                     fill
-                    unoptimized
                     loading="lazy"
                     sizes="150px"
                     className="object-contain p-2.5 transition-transform duration-300 group-hover:scale-[1.03] sm:p-3"

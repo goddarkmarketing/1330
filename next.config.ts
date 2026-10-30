@@ -11,7 +11,9 @@ const nextConfig: NextConfig = {
   basePath: basePath || undefined,
   assetPrefix: basePath || undefined,
   images: {
-    unoptimized: true,
+    // Custom loader required for static export; also injects GitHub Pages basePath
+    loader: "custom",
+    loaderFile: "./src/lib/image-loader.ts",
   },
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,

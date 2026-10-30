@@ -48,8 +48,6 @@ export function Hero() {
         width={HERO_IMAGE_WIDTH}
         height={HERO_IMAGE_HEIGHT}
         priority
-        unoptimized
-        quality={100}
         sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover object-[18%_center] md:object-contain md:object-center"
       />

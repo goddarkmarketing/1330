@@ -21,7 +21,6 @@ export function WhyChooseUs() {
         alt=""
         width={WHY_BG_WIDTH}
         height={WHY_BG_HEIGHT}
-        unoptimized
         loading="lazy"
         sizes="100vw"
         className="absolute inset-0 h-full w-full object-cover object-center md:object-contain"
