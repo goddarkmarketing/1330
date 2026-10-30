@@ -25,13 +25,14 @@ const sriracha = Sriracha({
   display: "swap",
 });
 
+const pagesUrl = "https://goddarkmarketing.github.io/1330/";
 const canonical = siteConfig.seo.canonicalUrl || undefined;
 
 export const metadata: Metadata = {
   title: siteConfig.seo.title,
   description: siteConfig.seo.description,
   keywords: [...siteConfig.seo.keywords],
-  metadataBase: new URL(canonical || "http://localhost:3000"),
+  metadataBase: new URL(canonical || pagesUrl),
   alternates: canonical ? { canonical } : undefined,
   openGraph: {
     title: siteConfig.seo.title,

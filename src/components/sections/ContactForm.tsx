@@ -64,34 +64,11 @@ export function ContactForm() {
 
     setLoading(true);
     try {
-      const response = await fetch("/api/quote", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
-      });
-
-      const data = (await response.json()) as { message?: string };
-
-      if (!response.ok) {
-        setMessage({
-          type: "info",
-          text:
-            data.message ??
-            `ระบบรับข้อมูลออนไลน์ยังไม่ได้เชื่อมต่อ กรุณาโทร ${siteConfig.phoneDisplay} หรือติดต่อ LINE ${siteConfig.lineId}`,
-        });
-        return;
-      }
-
-      // สำเร็จเฉพาะเมื่อ API จริงตอบกลับสำเร็จในอนาคต
+      // Static / GitHub Pages ไม่มี API — แสดงข้อความแนะนำติดต่อ (ห้ามขึ้นว่าส่งสำเร็จ)
+      await new Promise((resolve) => setTimeout(resolve, 400));
       setMessage({
         type: "info",
-        text: data.message ?? "ได้รับข้อมูลแล้ว ทีมงานจะติดต่อกลับโดยเร็ว",
-      });
-      setForm(initialState);
-    } catch {
-      setMessage({
-        type: "error",
-        text: `ไม่สามารถส่งข้อมูลได้ในขณะนี้ กรุณาโทร ${siteConfig.phoneDisplay} หรือ LINE ${siteConfig.lineId}`,
+        text: `ระบบรับข้อมูลออนไลน์ยังไม่ได้เชื่อมต่อ กรุณาโทร ${siteConfig.phoneDisplay} หรือติดต่อ LINE ${siteConfig.lineId} เพื่อขอใบเสนอราคา`,
       });
     } finally {
       setLoading(false);

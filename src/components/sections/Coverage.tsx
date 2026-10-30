@@ -1,14 +1,15 @@
 import { siteConfig } from "@/config/site";
+import { withBasePath } from "@/lib/paths";
 
 /** ไฟล์ต้นฉบับจากที่แนบ — คัดลอกตรงๆ ไม่ผ่าน resize / recompress */
 const DESKTOP = {
-  src: "/images/coverage-desktop.jpg",
+  src: withBasePath("/images/coverage-desktop.jpg"),
   width: 1024,
   height: 341,
 } as const;
 
 const MOBILE = {
-  src: "/images/coverage-mobile.jpg",
+  src: withBasePath("/images/coverage-mobile.jpg"),
   width: 1024,
   height: 1024,
 } as const;
