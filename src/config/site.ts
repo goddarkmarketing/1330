@@ -1,14 +1,17 @@
 export const siteConfig = {
   companyName: "THAI FAST TRANSPORT",
-  companyNameTh: "ไทยฟาสต์ ทรานสปอร์ต",
+  companyNameTh: "บริษัทธนพลเครือพัฒนา จำกัด",
   tagline: "บริการขนส่งทั่วประเทศ รวดเร็ว ปลอดภัย ถึงตรงเวลา",
   description:
     "บริษัทรับขนส่งสินค้าทั่วประเทศไทย บริการขนส่งสินค้าทุกประเภท ขนของย้ายบ้าน ย้ายสำนักงาน และส่งด่วนทั่วไทย",
 
-  // แก้เบอร์ / LINE / Facebook เป็นข้อมูลจริงก่อนเปิดใช้งาน
-  phone: "02-000-0000",
-  phoneTel: "020000000",
-  phoneDisplay: "02-000-0000 (ตัวอย่าง — แก้ใน config)",
+  // เบอร์ที่ใช้กดโทรบนเว็บ
+  phone: "099-259-5969",
+  phoneTel: "0992595969",
+  phoneDisplay: "099-259-5969",
+  // เบอร์สำนักงาน (แสดงเป็นข้อมูลติดต่อ)
+  officePhone: "02-117-4594",
+  officePhoneTel: "021174594",
   lineId: "@thaifast-example",
   lineUrl: "https://line.me/R/ti/p/@thaifast-example",
   facebookUrl: "https://facebook.com/",

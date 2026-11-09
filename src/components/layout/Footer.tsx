@@ -33,7 +33,8 @@ export function Footer() {
       <div className="container-site grid gap-8 py-10 pb-24 sm:grid-cols-2 sm:pb-10 lg:grid-cols-[1.5fr_0.9fr_1fr_1.1fr] lg:gap-8 lg:py-12">
         <div className="sm:col-span-2 lg:col-span-1">
           <Logo variant="light" />
-          <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/65">
+          <p className="mt-3 text-sm font-semibold text-white">{siteConfig.companyNameTh}</p>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-white/65">
             {siteConfig.description}
           </p>
         </div>
@@ -78,7 +79,15 @@ export function Footer() {
                 href={`tel:${siteConfig.phoneTel}`}
                 className="text-inherit no-underline transition-colors hover:text-white"
               >
-                {siteConfig.phoneDisplay}
+                โทร {siteConfig.phoneDisplay}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`tel:${siteConfig.officePhoneTel}`}
+                className="text-inherit no-underline transition-colors hover:text-white"
+              >
+                สำนักงาน {siteConfig.officePhone}
               </a>
             </li>
             <li>
@@ -129,7 +138,7 @@ export function Footer() {
 
       <div className="border-t border-white/10 bg-black/30">
         <p className="container-site py-4 text-center text-xs text-white/45">
-          © <CopyrightYear /> {siteConfig.companyName}. All rights reserved.
+          © <CopyrightYear /> {siteConfig.companyNameTh}. All rights reserved.
         </p>
       </div>
     </footer>

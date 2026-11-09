@@ -13,7 +13,7 @@ export function Logo({ variant = "dark", className = "" }: LogoProps) {
     <Link
       href="#home"
       className={`inline-flex min-w-0 items-center gap-2 no-underline sm:gap-2.5 ${className}`}
-      aria-label={siteConfig.companyName}
+      aria-label={`${siteConfig.companyName} ${siteConfig.companyNameTh}`}
     >
       <span
         className="relative flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-[var(--primary-red)] text-base font-bold italic text-white shadow-sm sm:h-10 sm:w-10 sm:text-lg"

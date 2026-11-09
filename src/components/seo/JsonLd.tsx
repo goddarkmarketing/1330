@@ -7,7 +7,8 @@ export function JsonLd() {
     name: siteConfig.companyName,
     alternateName: siteConfig.companyNameTh,
     description: siteConfig.description,
-    telephone: siteConfig.phone,
+    telephone: siteConfig.phoneTel,
+    legalName: siteConfig.companyNameTh,
     email: siteConfig.email,
     address: {
       "@type": "PostalAddress",

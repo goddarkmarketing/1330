@@ -23,6 +23,14 @@ const contactChannels = [
     Icon: Phone,
   },
   {
+    key: "office",
+    href: `tel:${siteConfig.officePhoneTel}`,
+    label: "สำนักงาน",
+    value: siteConfig.officePhone,
+    iconBg: "bg-[var(--primary-red)] text-white",
+    Icon: Phone,
+  },
+  {
     key: "line",
     href: siteConfig.lineUrl,
     label: "LINE Official",
