@@ -126,6 +126,8 @@ export function Contact() {
                     );
                   }
 
+                  if (!("href" in item)) return null;
+
                   return (
                     <a key={item.key} href={item.href} className={channelClassName}>
                       {content}

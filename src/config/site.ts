@@ -12,10 +12,10 @@ export const siteConfig = {
   // เบอร์สำนักงาน (แสดงเป็นข้อมูลติดต่อ)
   officePhone: "02-117-4594",
   officePhoneTel: "021174594",
-  // ใส่ไลน์ไอดีจริง เช่น @thanapontransport — ใช้แสดงคิวอาร์โค้ดและปุ่มเปิดไลน์
-  lineId: "@thanapontransport",
-  lineUrl: "https://line.me/ti/p/@thanapontransport",
-  // ถ้ามีไฟล์คิวอาร์จากไลน์จริง ให้ใส่ที่นี่ เช่น "/images/line-qr.png"
+  // สำคัญ: ต้องเป็นไลน์ไอดีจริง เช่น @company — ค่าตัวอย่างจะขึ้น 404
+  lineId: "@thanapon",
+  lineUrl: "https://line.me/ti/p/@thanapon",
+  // แนะนำ: วางไฟล์คิวอาร์จากไลน์จริงที่ public/images/line-qr.png แล้วใส่ path นี้
   lineQrImage: "",
   facebookUrl: "https://facebook.com/",
   youtubeUrl: "https://youtube.com/",
