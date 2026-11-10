@@ -98,12 +98,18 @@ export function LineModal() {
         </div>
 
         <div className="mt-5 flex flex-col gap-2.5">
-          <a href={`tel:${siteConfig.phoneTel}`} className="btn btn-primary w-full">
+          <a
+            href={siteConfig.lineUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-primary w-full !bg-[#06C755] !shadow-[0_6px_16px_rgba(6,199,85,0.28)] hover:!brightness-95"
+          >
+            <LineIcon className="h-5 w-5" />
+            เปิดแอปไลน์
+          </a>
+          <a href={`tel:${siteConfig.phoneTel}`} className="btn btn-outline w-full">
             โทร {siteConfig.phoneDisplay}
           </a>
-          <button type="button" className="btn btn-outline w-full" onClick={() => setOpen(false)}>
-            ปิดหน้าต่าง
-          </button>
         </div>
       </div>
     </div>
