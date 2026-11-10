@@ -35,7 +35,7 @@ const contactChannels = [
   },
   {
     key: "line",
-    label: "ไลน์ออฟฟิเชียล",
+    label: "ไลน์",
     value: siteConfig.lineId,
     iconBg: "bg-[#06C755] text-white",
     Icon: LineIcon,
