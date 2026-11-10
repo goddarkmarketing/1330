@@ -1,7 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { Phone, Headset } from "lucide-react";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ContactForm } from "@/components/sections/ContactForm";
+import { LineOpenButton } from "@/components/ui/LineOpenButton";
 import { siteConfig } from "@/config/site";
 
 function LineIcon({ className = "" }: { className?: string }) {
@@ -32,12 +35,11 @@ const contactChannels = [
   },
   {
     key: "line",
-    href: siteConfig.lineUrl,
-    label: "LINE Official",
+    label: "ไลน์ออฟฟิเชียล",
     value: siteConfig.lineId,
     iconBg: "bg-[#06C755] text-white",
     Icon: LineIcon,
-    external: true,
+    isLine: true,
   },
   {
     key: "support",
@@ -48,6 +50,9 @@ const contactChannels = [
     Icon: Headset,
   },
 ] as const;
+
+const channelClassName =
+  "group flex w-full items-center gap-3 rounded-[12px] border border-[var(--border)] bg-white px-3 py-3 text-left text-inherit no-underline shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5";
 
 export function Contact() {
   return (
@@ -88,19 +93,11 @@ export function Contact() {
                 />
               </div>
 
-              <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-1">
                 {contactChannels.map((item) => {
                   const Icon = item.Icon;
-                  const external = "external" in item && item.external;
-                  return (
-                    <a
-                      key={item.key}
-                      href={item.href}
-                      {...(external
-                        ? { target: "_blank", rel: "noopener noreferrer" }
-                        : {})}
-                      className="group flex items-center gap-3 rounded-[12px] border border-[var(--border)] bg-white px-3 py-3 text-inherit no-underline shadow-[var(--shadow-soft)] transition-transform hover:-translate-y-0.5"
-                    >
+                  const content = (
+                    <>
                       <span
                         className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] shadow-[0_4px_12px_rgba(21,21,21,0.08)] md:h-12 md:w-12 ${item.iconBg}`}
                       >
@@ -114,6 +111,24 @@ export function Contact() {
                           {item.value}
                         </span>
                       </span>
+                    </>
+                  );
+
+                  if ("isLine" in item && item.isLine) {
+                    return (
+                      <LineOpenButton
+                        key={item.key}
+                        className={`${channelClassName} cursor-pointer border-0 bg-white`}
+                        aria-label="เปิดคิวอาร์โค้ดไลน์"
+                      >
+                        {content}
+                      </LineOpenButton>
+                    );
+                  }
+
+                  return (
+                    <a key={item.key} href={item.href} className={channelClassName}>
+                      {content}
                     </a>
                   );
                 })}

@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { FloatingButtons } from "@/components/layout/FloatingButtons";
+import { LineModal } from "@/components/layout/LineModal";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
@@ -23,6 +24,7 @@ export default function HomePage() {
       </main>
       <Footer />
       <FloatingButtons />
+      <LineModal />
       <BackToTop />
     </>
   );

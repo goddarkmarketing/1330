@@ -2,6 +2,7 @@
 
 import { Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
+import { LineOpenButton } from "@/components/ui/LineOpenButton";
 
 function LineIcon({ className = "" }: { className?: string }) {
   return (
@@ -15,15 +16,12 @@ function LineIcon({ className = "" }: { className?: string }) {
 export function FloatingButtons() {
   return (
     <div className="fixed bottom-[max(1rem,env(safe-area-inset-bottom))] right-3 z-40 flex flex-col gap-2.5 sm:bottom-6 sm:right-6 sm:gap-3">
-      <a
-        href={siteConfig.lineUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="ติดต่อผ่าน LINE"
-        className="flex h-12 w-12 items-center justify-center rounded-full bg-[#06C755] text-white shadow-lg transition-transform hover:scale-105 sm:h-14 sm:w-14"
+      <LineOpenButton
+        aria-label="ติดต่อผ่านไลน์"
+        className="flex h-12 w-12 cursor-pointer items-center justify-center rounded-full border-0 bg-[#06C755] text-white shadow-lg transition-transform hover:scale-105 sm:h-14 sm:w-14"
       >
         <LineIcon className="h-6 w-6 sm:h-7 sm:w-7" />
-      </a>
+      </LineOpenButton>
       <a
         href={`tel:${siteConfig.phoneTel}`}
         aria-label="โทรปรึกษา"

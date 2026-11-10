@@ -12,8 +12,11 @@ export const siteConfig = {
   // เบอร์สำนักงาน (แสดงเป็นข้อมูลติดต่อ)
   officePhone: "02-117-4594",
   officePhoneTel: "021174594",
-  lineId: "@thaifast-example",
-  lineUrl: "https://line.me/R/ti/p/@thaifast-example",
+  // ใส่ไลน์ไอดีจริง เช่น @thanapontransport — ใช้แสดงคิวอาร์โค้ดและปุ่มเปิดไลน์
+  lineId: "@thanapontransport",
+  lineUrl: "https://line.me/ti/p/@thanapontransport",
+  // ถ้ามีไฟล์คิวอาร์จากไลน์จริง ให้ใส่ที่นี่ เช่น "/images/line-qr.png"
+  lineQrImage: "",
   facebookUrl: "https://facebook.com/",
   youtubeUrl: "https://youtube.com/",
 

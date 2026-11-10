@@ -1,5 +1,8 @@
+"use client";
+
 import { Logo } from "@/components/ui/Logo";
 import { CopyrightYear } from "@/components/layout/CopyrightYear";
+import { LineOpenButton } from "@/components/ui/LineOpenButton";
 import { siteConfig } from "@/config/site";
 
 function LineIcon({ className = "" }: { className?: string }) {
@@ -91,14 +94,9 @@ export function Footer() {
               </a>
             </li>
             <li>
-              <a
-                href={siteConfig.lineUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-inherit no-underline transition-colors hover:text-white"
-              >
-                LINE {siteConfig.lineId}
-              </a>
+              <LineOpenButton className="cursor-pointer border-0 bg-transparent p-0 text-inherit transition-colors hover:text-white">
+                ไลน์ {siteConfig.lineId}
+              </LineOpenButton>
             </li>
             <li>{siteConfig.workingHours}</li>
             <li className="leading-relaxed">{siteConfig.address}</li>
@@ -109,25 +107,22 @@ export function Footer() {
               href={siteConfig.facebookUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="Facebook"
+              aria-label="เฟซบุ๊ก"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#1877F2] text-white"
             >
               <FacebookIcon className="h-5 w-5" />
             </a>
-            <a
-              href={siteConfig.lineUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LINE"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-[#06C755] text-white"
+            <LineOpenButton
+              aria-label="เปิดคิวอาร์โค้ดไลน์"
+              className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border-0 bg-[#06C755] text-white"
             >
               <LineIcon className="h-5 w-5" />
-            </a>
+            </LineOpenButton>
             <a
               href={siteConfig.youtubeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="YouTube"
+              aria-label="ยูทูบ"
               className="flex h-10 w-10 items-center justify-center rounded-full bg-[#FF0000] text-white"
             >
               <YoutubeIcon className="h-5 w-5" />
@@ -138,7 +133,7 @@ export function Footer() {
 
       <div className="border-t border-white/10 bg-black/30">
         <p className="container-site py-4 text-center text-xs text-white/45">
-          © <CopyrightYear /> {siteConfig.companyNameTh}. All rights reserved.
+          © <CopyrightYear /> {siteConfig.companyNameTh} สงวนลิขสิทธิ์
         </p>
       </div>
     </footer>

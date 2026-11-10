@@ -68,7 +68,7 @@ export function ContactForm() {
       await new Promise((resolve) => setTimeout(resolve, 400));
       setMessage({
         type: "info",
-        text: `ระบบรับข้อมูลออนไลน์ยังไม่ได้เชื่อมต่อ กรุณาโทร ${siteConfig.phoneDisplay} หรือติดต่อ LINE ${siteConfig.lineId} เพื่อขอใบเสนอราคา`,
+        text: `ระบบรับข้อมูลออนไลน์ยังไม่ได้เชื่อมต่อ กรุณาโทร ${siteConfig.phoneDisplay} หรือติดต่อไลน์ ${siteConfig.lineId} เพื่อขอใบเสนอราคา`,
       });
     } finally {
       setLoading(false);
