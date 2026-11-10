@@ -12,9 +12,9 @@ export const siteConfig = {
   // เบอร์สำนักงาน (แสดงเป็นข้อมูลติดต่อ)
   officePhone: "02-117-4594",
   officePhoneTel: "021174594",
-  lineId: "@399ahspl",
-  lineUrl: "https://line.me/R/ti/p/@399ahspl?oat_content=qr",
-  // ถ้ามีไฟล์คิวอาร์จากไลน์จริง ให้ใส่ที่นี่ เช่น "/images/line-qr.png"
+  // ไลน์ส่วนตัว — ใช้ ~ หน้าไอดี (ไม่ใช่บัญชีออฟฟิเชียล @)
+  lineId: "0992595969",
+  lineUrl: "https://line.me/ti/p/~0992595969",
   lineQrImage: "",
   facebookUrl: "https://facebook.com/",
   youtubeUrl: "https://youtube.com/",
